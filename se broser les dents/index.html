@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Brossage de dents - 3 minutes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1><i class="fa-solid fa-tooth"></i> Brossage de dents</h1>
+
+    <div id="zoneIcon" class="icon">
+        <i class="fa-solid fa-play"></i>
+    </div>
+
+    <p id="step">Prêt ?</p>
+    <div id="timer">03:00</div>
+
+    <div class="progress-bar">
+        <div id="progress"></div>
+    </div>
+
+    <div class="buttons">
+        <button onclick="startTimer()">
+            <i class="fa-solid fa-play"></i> Start
+        </button>
+        <button onclick="resetTimer()">
+            <i class="fa-solid fa-rotate"></i> Reset
+        </button>
+        <button onclick="toggleMusic()">
+            <i class="fa-solid fa-music"></i> Musique
+        </button>
+    </div>
+
+    <p id="message"></p>
+</div>
+
+
+<audio id="ding" src="ding.mp3"></audio>
+<audio id="music" src="music.mp3" loop></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
