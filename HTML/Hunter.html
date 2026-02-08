@@ -1,0 +1,202 @@
+﻿<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Clément</title>
+<!--
+  <-- On écrit le CSS à l'intérieur des balises <style> ->
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      color: red;
+      background: greenyellow;
+      display: flex;
+      flex-wrap: wrap;
+      /*mettre en colonne le body (2 parties)*/
+    }
+
+    a {
+      text-decoration: none;
+      /* enlève le style de base sur les liens */
+    }
+
+    /* pour voir les limites des divs */
+
+    p {
+      color: blue;
+    }
+
+    /* pour voir les limites des divs */
+
+    .button {
+      background: red;
+      /* couleur arrière plan */
+      color: white;
+      border-radius: 50px;
+      /* angles ronds */
+      margin: 15px auto;
+      /* marge exterieure */
+      padding: 5px 5px 10px;
+      /*5% INTERIEURE */
+      height: 50px 30px;
+    }
+
+    #menu {
+      background: green;
+      height: 140%;
+      width: 20%;
+      /*partie 1 du body */
+      flex-direction: column;
+      justify-content: start;
+      display: flex;
+      align-items: center;
+      color: yellow;
+    }
+
+    #contenu {
+      width: 80%;
+      /* display: flex;*/
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-start;
+      /* partie 2 du body */
+      background: url('fond11.PNG') no-repeat center / cover;
+    }
+
+    #score,
+    #vie {
+      color: #fff;
+      font-size: 200%;
+      display: flex;
+      align-items: top;
+    }
+
+    #regles {
+      color: #00ff53;
+      font-size: 40%;
+      margin: 40%;
+    }
+
+    .ennemi {
+      position: absolute;
+      width: 129px;
+      height: 189px;
+      background-image: url('zombie.gif');
+      cursor: url('curseur.png') 32 32, auto;
+    }
+  </style>-->
+  <link rel="stylesheet" href="Hunter.css">
+
+  <script src="jquery.js"></script>
+
+</head>
+
+<body>
+
+  <div id='menu'>
+    <img id='logo' width="50%" src='champi.png'>
+    <br>
+    <h1 id="titre">Clément G.F</h1>
+    <br>
+    <p>La meilleur team!</p>
+    <br>
+    <a id="btn1" class="button" href="index.html">Accueil</a>
+    <br>
+    <a id="btn2" class="button" href="Clikator.html">Clikator</a>
+    <br>
+    <a id="btn3" class="button" href="Hunter.html">Hunter</a>
+    <br>
+    <a id="btn4" class="button" href="Musique1.html">Musique 1</a>
+    <br>
+    <a id="btn5" class="button" href="Musique2.html">Musique 2</a>
+    <br>
+    <a id="btn6" class="button" href="Musique3.html">Musique 3</a>
+  </div>
+
+  <div id='contenu'>
+
+    <div id='score'>Score: <span>0</span></div>
+    <div id='vie'></div>
+    <button id='commencerpartief'>Commencer une partie - facile</button>
+    <button id='commencerpartiem'>Commencer une partie - moyen</button>
+    <button id='commencerpartied'>Commencer une partie - difficile</button>
+  </div>
+  <div id='regles'>
+    ce sont les regles
+  </div>
+
+
+
+  <script>
+    // Ici on peut écrire du JavaScript !
+
+    var score = 0;
+    var vitesse = 0;
+    var time = 1000;
+    var posYmin = 50;
+    var posYmax = $(window).height() - 300;
+    var posXmax = 1600;
+    var vie = 3;
+    var niveau = 0;
+
+    $('#commencerpartief').click(function () {
+      $('#regles').hide();
+      niveau = 1;
+      vitesse = 10000000000000000000000000000;
+    });
+    $('#commencerpartiem').click(function () {
+      niveau = 2;
+      vitesse = 1000000000;
+    });
+    $('#commencerpartied').click(function () {
+      niveau = 3;
+      vitesse = 10000, 5;
+    });
+
+
+    setInterval(function () {
+      if (niveau > 0) {
+        var ennemi = $('<img class="ennemi">');
+        var posEnnemi = (posYmax * Math.random()) + posYmin;
+        ennemi.css({ top: posEnnemi, left: 350 });
+        $('body').append(ennemi);
+
+        ennemi.animate({ left: 2000 }, vitesse, 'linear');
+        ennemi.click(function () {
+          $(this).remove();
+          score++;
+          $('#score span').text(score);
+          vie++;
+          //  $('#vie span').text(vie);
+        });
+
+        if (score == 20) {
+          alert('Bravo! Tu as gagnié');
+          window.location.reload();
+        }
+
+
+
+        $('.ennemi').each(function () {
+          if ($(this).offset().left > posXmax) {
+            vie--;
+            //  $('#vie span').text(vie);
+            if (vie == 0) {
+              alert('game over');
+              window.location.reload();
+            }
+          }
+        });
+      };
+    }, time);
+
+
+  </script>
+
+</body>
+
+</html>

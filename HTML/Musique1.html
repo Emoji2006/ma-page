@@ -1,0 +1,67 @@
+﻿<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clément</title>
+
+    <link rel="stylesheet" href="Musique1.css">
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+
+    <div id='menu'>
+        <img id='logo' width="50%" src='champi.png'>
+        <br>
+        <h1 id="titre">Clément G.F</h1>
+        <br>
+        <p>La meilleur team!</p>
+        <br>
+        <a class="button" href="index.html">Accueil</a>
+        <br>
+        <a class="button" href="Clikator.html">Clikator</a>
+        <br>
+        <a class="button" href="Hunter.html">Hunter</a>
+        <br>
+        <a class="button" href="Musique1.html">Musique 1</a>
+        <br>
+        <a class="button" href="Musique2.html">Musique 2</a>
+        <br>
+        <a class="button" href="Musique3.html">Musique 3</a>
+    </div>
+
+    <div id='contenu'>
+        <div class='texte'>
+
+            <h2>Playlist MP3 automatique</h2>
+
+            <!-- TITRE DE LA MUSIQUE -->
+            <p id="current-title"><b>Musique en cours :</b> </p>
+
+            <!-- LECTEUR AUDIO UNIQUE -->
+            <audio id="player" controls autoplay>
+                Votre navigateur ne supporte pas l'audio HTML5.
+            </audio>
+
+            <br><br>
+
+            <!-- Boutons pour changer de musique -->
+            <button id="prev">⏮ Précédent</button>
+            <button id="playpause">⏯ Pause/Play</button>
+            <button id="next">⏭ Suivant</button>
+
+            <br><br>
+
+            <p><b>Playlist :</b></p>
+            <ul id="playlist-names"></ul>
+
+        </div>
+    </div>
+
+    <script src="musique.js"></script>
+
+</body>
+
+</html>

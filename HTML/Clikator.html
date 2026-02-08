@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Clément</title>
+
+  <link rel="stylesheet" href="Clikator.css">
+  <script src="jquery.js"></script>
+
+</head>
+
+<body>
+
+  <div id='menu'>
+    <img id='logo' width="50%" src='champi.png'>
+    <br>
+    <h1 id="titre">Clément G.F</h1>
+    <br>
+    <p>La meilleur team!</p>
+    <br>
+    <a id="btn1" class="button" href="index.html">Accueil</a>
+    <br>
+    <a id="btn2" class="button" href="Clikator.html">Clikator</a>
+    <br>
+    <a id="btn3" class="button" href="Hunter.html">Hunter</a>
+    <br>
+    <a id="btn4" class="button" href="Musique1.html">Musique 1</a>
+    <br>
+    <a id="btn5" class="button" href="Musique2.html">Musique 2</a>
+    <br>
+    <a id="btn6" class="button" href="Musique3.html">Musique 3</a>
+  </div>
+
+  <div id='contenu'>
+    <div class='texte'>
+      Tu as 10 secondes pour faire un max de clics !! <br><br> Clique sur la zone pour commencer...PRET !
+      <div id='score'>Score: <span>0</span></div>
+      <div id='zone-clic'></div>
+      <div id='chrono'>Temps restant: <span>10</span></div>
+      <br>
+      <a id='restart1' class="button">Recommencer une partie</a>
+    </div>
+  </div>
+
+
+
+  <script>
+    // Ici on peut écrire du JavaScript !
+    var score = 0;
+    var chrono = 10;
+    var time;
+    var started = false;
+
+
+    $('#restart1').click(function () {
+      window.location.reload();
+    });
+
+    $('#zone-clic').click(function () {
+      score++;
+      $('#score span').text(score);
+      if (started == false) {
+        time = setInterval(function () {
+          chrono--;
+          $('#chrono span').text(chrono);
+          if (chrono == 0) {
+            alert('Bravo! Ton score est de' + score + 'et ta moyenne est de' + (score / 10) + 'GPS (clics par secondes)');
+            window.location.reload();
+          }
+        }, 1000);
+      }
+      started = true;
+    }); 
+  </script>
+
+</body>
+
+</html>
