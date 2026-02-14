@@ -6,7 +6,8 @@ const steps = [
     { text: "Haut gauche", icon: "fa-arrow-up-left" },
     { text: "Haut droite", icon: "fa-arrow-up-right" },
     { text: "Bas gauche", icon: "fa-arrow-down-left" },
-    { text: "Bas droite", icon: "fa-arrow-down-right" }
+    { text: "Bas droite", icon: "fa-arrow-down-right" },
+    { text: "Milieu", icon: "fa-arrow-middle" }
 ];
 
 const ding = document.getElementById("ding");
