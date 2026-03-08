@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -36,6 +36,58 @@
     <p id="message"></p>
 </div>
 
+
+<audio id="ding" src="ding.mp3"></audio>
+<audio id="music" src="music.mp3" loop></audio>
+
+<script src="script.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brossage de dents - 3 minutes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+    <h1><i class="fa-solid fa-tooth"></i> Brossage de dents</h1>
+
+    <div class="main-content">
+        <div class="left-panel">
+            <div id="zoneIcon" class="icon">
+                <i class="fa-solid fa-play"></i>
+            </div>
+            <p id="step">Prêt ?</p>
+        </div>
+
+        <div class="right-panel">
+            <div id="timer">03:00</div>
+            <p id="message"></p>
+        </div>
+    </div>
+
+    <div class="progress-bar">
+        <div id="progress"></div>
+    </div>
+
+    <div class="buttons">
+        <button onclick="startTimer()">
+            <i class="fa-solid fa-play"></i> Start
+        </button>
+        <button onclick="resetTimer()">
+            <i class="fa-solid fa-rotate"></i> Reset
+        </button>
+        <button onclick="toggleMusic()">
+            <i class="fa-solid fa-music"></i> Musique
+        </button>
+    </div>
+</div>
 
 <audio id="ding" src="ding.mp3"></audio>
 <audio id="music" src="music.mp3" loop></audio>
