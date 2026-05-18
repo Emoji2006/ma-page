@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kahoot Multi-Appareils - GitHub Pages</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="quiz-container">
+        
+        <!-- ÉCRAN 1 : LOBBY CONTROLLER & REJOINDRE -->
+        <div id="screen-lobby" class="screen active">
+            <div class="kahoot-logo">⚡ Kahoot Live</div>
+            <h2>Rejoindre la partie globale</h2>
+            <div class="auth-form">
+                <input type="text" id="player-pseudo" placeholder="Votre Pseudo..." autocomplete="off">
+                <button onclick="startGame()" class="btn-start">Rejoindre la session 🚀</button>
+            </div>
+            <div style="margin-top: 25px; text-align: center; border-top: 1px solid #ddd; padding-top: 15px;">
+                <p style="font-size:0.85rem; color:#666; margin-bottom: 10px;">Télécommande Maître du jeu (Prof) :</p>
+                <button onclick="adminAction('next')" class="btn-start" style="background:#46178f; font-size:1rem; padding:10px;">Question Suivante ➔</button>
+                <button onclick="adminAction('reset')" class="btn-stop" style="margin-top:10px;">Réinitialiser la session de groupe</button>
+            </div>
+        </div>
+
+        <!-- ÉCRAN 2 : EN ATTENTE DU PROF / DES AUTRES -->
+        <div id="screen-waiting" class="screen">
+            <div class="waiting-screen">
+                <div class="loader"></div>
+                <h2>Synchronisation...</h2>
+                <p>Regardez l'écran principal ou attendez le signal du gérant !</p>
+                <div class="user-badge" style="margin-top: 20px;" id="wait-pseudo">👤 -</div>
+            </div>
+        </div>
+
+        <!-- ÉCRAN 3 : ZONE DE JEU (SYNCHRONISÉE) -->
+        <div id="screen-game" class="screen">
+            <div class="quiz-header">
+                <span class="user-badge" id="display-pseudo">👤 Joueur</span>
+                <span class="score-badge" id="display-score">0 pts</span>
+                <div class="timer" id="chrono">15</div>
+            </div>
+
+            <div class="question-section">
+                <h2 id="question-text">Chargement de la question de groupe...</h2>
+            </div>
+
+            <div class="propositions-section">
+                <button class="btn-option" onclick="selectAnswer(0)">
+                    <span class="shape">▲</span> <span id="opt-0">Option 1</span>
+                </button>
+                <button class="btn-option" onclick="selectAnswer(1)">
+                    <span class="shape">⬢</span> <span id="opt-1">Option 2</span>
+                </button>
+                <button class="btn-option" onclick="selectAnswer(2)">
+                    <span class="shape">●</span> <span id="opt-2">Option 3</span>
+                </button>
+                <button class="btn-option" onclick="selectAnswer(3)">
+                    <span class="shape">■</span> <span id="opt-3">Option 4</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- ÉCRAN 4 : PODIUM EN DIRECT -->
+        <div id="screen-leaderboard" class="screen">
+            <h2>🏆 Classement Général en Temps Réel</h2>
+            <table class="leaderboard-table">
+                <thead>
+                    <tr>
+                        <th>Rang</th>
+                        <th>Joueur</th>
+                        <th>Points cumulés</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-rows">
+                    <!-- Mis à jour en direct dès qu'un joueur répond sur un autre téléphone -->
+                </tbody>
+            </table>
+            <div style="margin-top: 30px;">
+                <button onclick="window.location.reload()" class="btn-start">Quitter / Rejouer 🔄</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Chargement des modules Firebase SDK obligatoires -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+    
+    <!-- Liaison avec la logique temps réel -->
+    <script src="script.js"></script>
+</body>
+</html>

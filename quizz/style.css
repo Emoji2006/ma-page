@@ -1,0 +1,159 @@
+:root {
+    --kahoot-red: #e21b3c;
+    --kahoot-blue: #1368ce;
+    --kahoot-yellow: #d89e00;
+    --kahoot-green: #26890c;
+    --bg-dark: #33145a;
+}
+
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+body { 
+    background: var(--bg-dark); 
+    color: #fff;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    padding: 20px; 
+}
+
+.quiz-container { 
+    background: #ffffff; 
+    color: #333;
+    width: 100%; 
+    max-width: 700px; 
+    border-radius: 16px; 
+    box-shadow: 0 12px 40px rgba(0,0,0,0.4); 
+    padding: 35px; 
+}
+
+/* Gestion de l'affichage des écrans */
+.screen { display: none; }
+.screen.active { display: block; }
+
+.kahoot-logo {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #46178f;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+h2 { 
+    text-align: center; 
+    margin-bottom: 25px; 
+    color: #2c3e50; 
+    font-size: 1.4rem; 
+}
+
+/* Formulaires et Boutons du Menu */
+.auth-form input { 
+    width: 100%; 
+    padding: 16px; 
+    border: 3px solid #cbd5e1; 
+    border-radius: 8px; 
+    font-size: 1.2rem; 
+    text-align: center; 
+    font-weight: bold; 
+    margin-bottom: 15px; 
+    outline: none; 
+}
+.auth-form input:focus { border-color: #46178f; }
+
+.btn-start { 
+    display: block; 
+    width: 100%; 
+    background: #333; 
+    color: white; 
+    border: none; 
+    padding: 16px; 
+    border-radius: 8px; 
+    font-size: 1.2rem; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: background 0.2s; 
+}
+.btn-start:hover { background: #111; }
+
+/* Entête Zone de Jeu */
+.quiz-header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 25px; 
+    border-bottom: 2px solid #f1f5f9; 
+    padding-bottom: 15px; 
+}
+.user-badge { background: #f1f5f9; padding: 6px 14px; border-radius: 20px; font-weight: bold; color: #475569; }
+.score-badge { background: #eafaf1; color: var(--kahoot-green); padding: 6px 14px; border-radius: 20px; font-weight: bold; }
+.timer { 
+    background: #334155; 
+    color: white; 
+    width: 45px; 
+    height: 45px; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-weight: bold; 
+    font-size: 1.2rem; 
+}
+
+/* Grille de boutons type Kahoot */
+.propositions-section { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px; 
+    margin-bottom: 25px; 
+}
+.btn-option { 
+    height: 105px; 
+    border: none; 
+    border-radius: 8px; 
+    color: white; 
+    font-size: 1.2rem; 
+    font-weight: bold; 
+    cursor: pointer; 
+    text-align: left; 
+    padding-left: 20px; 
+    display: flex; 
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.1s, opacity 0.2s;
+}
+.btn-option:hover:not(:disabled) { filter: brightness(1.1); transform: translateY(-2px); }
+.btn-option:disabled { cursor: not-allowed; }
+
+/* Couleurs des boutons */
+.btn-option:nth-child(1) { background-color: var(--kahoot-red); }
+.btn-option:nth-child(2) { background-color: var(--kahoot-blue); }
+.btn-option:nth-child(3) { background-color: var(--kahoot-yellow); }
+.btn-option:nth-child(4) { background-color: var(--kahoot-green); }
+
+.shape { 
+    font-size: 1.6rem; 
+    background: rgba(255,255,255,0.25); 
+    width: 38px; 
+    height: 38px; 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 6px; 
+}
+
+/* Tableau des scores */
+.leaderboard-table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+.leaderboard-table th, .leaderboard-table td { padding: 14px; text-align: left; border-bottom: 2px solid #f1f5f9; }
+.leaderboard-table th { background: #f8fafc; color: #64748b; }
+.top-three { background: #fef08a; font-weight: bold; }
+.txt-success { color: var(--kahoot-green); font-weight: bold; }
+
+.link-score { background: none; border: none; color: #1368ce; font-weight: bold; font-size: 1rem; cursor: pointer; text-decoration: underline; }
+.btn-stop { background: none; border: none; color: #94a3b8; font-weight: bold; cursor: pointer; display: block; margin: 0 auto; font-size: 0.95rem; }
+.btn-stop:hover { color: var(--kahoot-red); }
