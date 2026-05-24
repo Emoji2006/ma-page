@@ -1,83 +1,172 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Culture Générale</title>
-    <style>
-        :root {
-            --primary: #4a90e2;
-            --danger: #e74c3c;
-            --success: #2ecc71;
-            --dark: #2c3e50;
-            --light: #f8f9fa;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
-        body { background: #eef2f3; color: var(--dark); padding: 20px; display: flex; justify-content: center; }
-        .container { width: 100%; max-width: 600px; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h1, h2 { text-align: center; margin-bottom: 20px; }
-        .hidden { display: none !important; }
-        
-        /* Formulaires et Boutons */
-        input[type="text"] { width: 100%; padding: 12px; margin-bottom: 15px; border: 2px solid #ddd; border-radius: 8px; font-size: 16px; }
-        button { width: 100%; padding: 12px; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; transition: 0.2s; font-weight: bold; }
-        .btn-main { background: var(--primary); color: white; }
-        .btn-danger { background: var(--danger); color: white; margin-top: 15px; }
-        button:hover { opacity: 0.9; }
-
-        /* Zone de Quiz */
-        .quiz-header { display: flex; justify-content: space-between; margin-bottom: 20px; font-weight: bold; background: var(--light); padding: 10px; border-radius: 6px; }
-        .question-box { font-size: 18px; font-weight: 600; margin-bottom: 20px; text-align: center; }
-        .answers-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
-        .btn-answer { background: var(--light); border: 2px solid #ddd; color: var(--dark); text-align: left; }
-        .btn-answer:hover { background: #e0e0e0; }
-
-        /* Tableau des scores */
-        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }
-        th { background: var(--dark); color: white; }
-        tr:nth-child(even) { background: var(--light); }
-    </style>
+    <title>Kahoot - Manette Joueur</title>
+    <link class="link-css" rel="stylesheet" href="style_joueur.css">
 </head>
+
 <body>
 
-<div class="container">
-    <div id="screen-login">
-        <h1>Quiz Culture Générale</h1>
-        <p style="text-align:center; margin-bottom:15px;">Entrez votre pseudo pour commencer (70 questions)</p>
-        <input type="text" id="pseudo" placeholder="Votre Pseudo..." maxlength="20">
-        <button class="btn-main" onclick="startQuiz()">Commencer le Jeu</button>
+    <div id="player-login">
+        <h2>Rejoindre le Quiz</h2>
+        <input type="text" id="pseudo" placeholder="Entrez votre Pseudo..." maxlength="15">
+        <button class="btn-join" onclick="rejoindre()">ENTRER</button>
     </div>
 
-    <div id="screen-quiz" class="hidden">
-        <div class="quiz-header">
-            <span id="info-progress">Question : 1/70</span>
-            <span id="info-score">Score : 0</span>
+    <div id="player-wait" class="hidden">
+        <div class="msg">📍 Connecté ! <br><br> Regardez l'écran géant, la partie va commencer...</div>
+    </div>
+
+    <div id="player-game" class="hidden">
+        <div class="game-status">
+            <span id="txt-score">Score : 0</span>
+            <span id="txt-q">Question : --</span>
         </div>
-        <div class="question-box" id="question-text">Chargement de la question...</div>
-        <div class="answers-grid" id="answers-container"></div>
-        
-        <button class="btn-danger" onclick="leaveQuiz()">Arrêter et Sauvegarder</button>
+
+        <div id="zone-boutons" class="manette">
+            <button class="pad pad-0" onclick="voter(0)">🔺</button>
+            <button class="pad pad-1" onclick="voter(1)">🔷</button>
+            <button class="pad pad-2" onclick="voter(2)">🟢</button>
+            <button class="pad pad-3" onclick="voter(3)">🟩</button>
+        </div>
+
+        <div id="zone-validation" class="msg hidden">Réponse enregistrée. Attente de l'écran géant...</div>
+
+        <button class="btn-leave" onclick="abandonner()">🏳️ Abandonner et figer mon score</button>
     </div>
 
-    <div id="screen-leaderboard" class="hidden">
-        <h2>Classement Général</h2>
-        <div id="final-player-score" style="text-align:center; font-weight:bold; margin-bottom:15px; color:var(--success);"></div>
+    <div id="player-end" class="hidden">
+        <h2 id="end-title">Partie Terminée !</h2>
+        <p id="end-desc"></p>
+
+        <h3>Top 10 Actuel :</h3>
         <table>
             <thead>
                 <tr>
-                    <th>Rang</th>
+                    <th>Pos</th>
                     <th>Pseudo</th>
                     <th>Score</th>
-                    <th>Réduites</th>
                 </tr>
             </thead>
-            <tbody id="leaderboard-rows"></tbody>
+            <tbody id="leaderboard-body"></tbody>
         </table>
-        <button class="btn-main" style="margin-top: 20px;" onclick="location.reload()">Rejouer</button>
+        <button class="btn-join btn-restart" onclick="location.reload()">Retour au menu</button>
     </div>
-</div>
 
-<script src="app.js"></script>
+    <script src="questions.js"></script>
+    <script>
+        let monPseudo = "";
+        let derniereQuestionVue = -1;
+
+        function rejoindre() {
+            const pseudoInput = document.getElementById('pseudo').value.trim();
+            if (!pseudoInput) return alert("Pseudo requis");
+
+            fetch('serveur.php?action=joueur_rejoindre', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        pseudo: pseudoInput
+                    })
+                })
+                .then(r => r.json())
+                .then(data => {
+                    if (data.success) {
+                        monPseudo = pseudoInput;
+                        document.getElementById('player-login').classList.add('hidden');
+                        document.getElementById('player-wait').classList.remove('hidden');
+                        setInterval(ecouterServeur, 700);
+                    } else {
+                        alert(data.error);
+                    }
+                });
+        }
+
+        function ecouterServeur() {
+            if (!monPseudo) return;
+            fetch(`serveur.php?action=joueur_statut&pseudo=${encodeURIComponent(monPseudo)}`)
+                .then(r => r.json())
+                .then(data => {
+                    const step = data.statut.etape;
+                    const currentQ = parseInt(data.statut.question_actuelle);
+                    const joueur = data.joueur;
+
+                    if (joueur && joueur.actif == 0) {
+                        basculerEcranFin(`Vous avez abandonné !`, `Votre score est figé à <strong>${joueur.score} points</strong> (${joueur.questions_jouees}/70 q.).`, data.classement);
+                        return;
+                    }
+                    if (step === 'podium') {
+                        basculerEcranFin(`Fin du match !`, `Vous terminez avec <strong>${joueur ? joueur.score : 0} points</strong>.`, data.classement);
+                        return;
+                    }
+                    if (step === 'jeu') {
+                        document.getElementById('player-wait').classList.add('hidden');
+                        document.getElementById('player-game').classList.remove('hidden');
+                        document.getElementById('txt-score').innerText = `Score : ${joueur.score}`;
+                        document.getElementById('txt-q').innerText = `Q: ${currentQ + 1}/70`;
+
+                        if (currentQ !== derniereQuestionVue) {
+                            derniereQuestionVue = currentQ;
+                            document.getElementById('zone-boutons').classList.remove('hidden');
+                            document.getElementById('zone-validation').classList.add('hidden');
+                        }
+                    }
+                });
+        }
+
+        function voter(indexReponse) {
+            document.getElementById('zone-boutons').classList.add('hidden');
+            document.getElementById('zone-validation').classList.remove('hidden');
+
+            const bonneReponse = questionsData[derniereQuestionVue].r;
+            const estCorrect = (indexReponse === bonneReponse);
+
+            fetch('serveur.php?action=joueur_repondre', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    pseudo: monPseudo,
+                    question_index: derniereQuestionVue,
+                    correct: estCorrect
+                })
+            });
+        }
+
+        function abandonner() {
+            if (confirm("Confirmer l'abandon ? Votre classement sera conservé.")) {
+                fetch('serveur.php?action=joueur_abandonner', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        pseudo: monPseudo
+                    })
+                });
+            }
+        }
+
+        function basculerEcranFin(titre, description, classement) {
+            document.getElementById('player-wait').classList.add('hidden');
+            document.getElementById('player-game').classList.add('hidden');
+            document.getElementById('player-end').classList.remove('hidden');
+            document.getElementById('end-title').innerText = titre;
+            document.getElementById('end-desc').innerHTML = description;
+
+            let html = "";
+            classement.forEach((row, index) => {
+                html += `<tr><td><strong>#${index+1}</strong></td><td>${row.pseudo}</td><td>${row.score} pts</td></tr>`;
+            });
+            document.getElementById('leaderboard-body').innerHTML = html;
+        }
+    </script>
 </body>
+
 </html>

@@ -1,0 +1,222 @@
+:root {
+    --purple-bg: #46178f;
+    --red-kahoot: #e21b3c;
+    --blue-kahoot: #1368ce;
+    --yellow-kahoot: #d89e00;
+    --green-kahoot: #26890c;
+    --dark-btn: #333333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: var(--purple-bg);
+    color: white;
+    padding: 30px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 900;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.separator {
+    opacity: 0.3;
+    margin: 20px;
+    border: 0;
+    height: 1px;
+    background: white;
+}
+
+#panel-attente h2 {
+    font-size: 28px;
+    margin: 40px 0;
+    animation: blink 1.5s infinite;
+}
+
+#liste-joueurs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#liste-joueurs span {
+    background: white;
+    color: var(--purple-bg);
+    padding: 8px 15px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.box {
+    background: #f2f2f2;
+    color: #333;
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+#q-numero {
+    color: #666;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#q-texte {
+    font-size: 36px;
+    font-weight: 800;
+    margin: 10px 0 50px 0;
+    color: #111;
+    line-height: 1.3;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.rep {
+    padding: 25px 30px;
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 12px;
+    color: white;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.15);
+}
+
+.rep span {
+    margin-left: 15px;
+}
+
+.rep-0 {
+    background: var(--red-kahoot);
+}
+
+.rep-1 {
+    background: var(--blue-kahoot);
+}
+
+.rep-2 {
+    background: var(--yellow-kahoot);
+}
+
+.rep-3 {
+    background: var(--green-kahoot);
+}
+
+.controls {
+    margin-top: 30px;
+}
+
+.btn {
+    color: white;
+    padding: 16px 35px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.1s;
+}
+
+.btn-start {
+    background: var(--green-kahoot);
+    box-shadow: 0 5px 0 #1b6208;
+    font-size: 24px;
+}
+
+.btn-next {
+    background: var(--blue-kahoot);
+    box-shadow: 0 5px 0 #0f4fa0;
+}
+
+.btn-stop {
+    background: var(--red-kahoot);
+    box-shadow: 0 5px 0 #b11029;
+}
+
+.btn-reset {
+    background: var(--dark-btn);
+    box-shadow: 0 5px 0 #111;
+}
+
+.btn:active {
+    transform: translateY(4px);
+    box-shadow: none;
+}
+
+.podium-title {
+    color: var(--yellow-kahoot);
+    margin-bottom: 20px;
+}
+
+#podium-rows {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    font-size: 22px;
+}
+
+li {
+    background: white;
+    color: #333;
+    margin: 10px 0;
+    padding: 15px 25px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+li:nth-child(1) {
+    border-left: 8px solid #f1c40f;
+    background: #fef9e7;
+}
+
+li:nth-child(2) {
+    border-left: 8px solid #95a5a6;
+    background: #f2f4f4;
+}
+
+li:nth-child(3) {
+    border-left: 8px solid #e67e22;
+    background: #fdf2e9;
+}
+
+.hidden {
+    display: none !important;
+}
