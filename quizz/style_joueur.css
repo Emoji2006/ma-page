@@ -30,6 +30,7 @@ body {
     padding: 30px 20px;
     border-radius: 16px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 #player-login h2 {
@@ -48,7 +49,6 @@ input[type="text"] {
     margin-bottom: 15px;
     text-align: center;
     font-weight: bold;
-    transition: border-color 0.2s;
 }
 
 input[type="text"]:focus {
@@ -67,7 +67,6 @@ input[type="text"]:focus {
     border-radius: 8px;
     cursor: pointer;
     box-shadow: 0 4px 0 #111;
-    transition: transform 0.1s;
 }
 
 .btn-join:active {
@@ -81,6 +80,7 @@ input[type="text"]:focus {
     margin: auto;
     color: #444;
     line-height: 1.4;
+    text-align: center;
 }
 
 .game-status {

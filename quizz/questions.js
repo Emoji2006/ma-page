@@ -53,7 +53,7 @@ const questionsData = [
     { q: "Quel organe permet aux poissons de respirer sous l'eau ?", a: ["Les poumons", "Les branchies", "Les ecailles", "La peau"], r: 1 },
     { q: "Quel est le symbole chimique de l'eau ?", a: ["CO2", "O2", "H2O", "NaCl"], r: 2 },
     { q: "Combien de couleurs y a-t-il dans l'arc-en-ciel ?", a: ["5", "6", "7", "8"], r: 2 },
-    { q: "Quel peintre est celebre pour avoir coupe son oreille ?", a: ["Vincent van Gogh", "Pablo Picasso", "Claude Monet", "Salvador Dali"], r: 0 },
+    { q: "Quel painter est celebre pour avoir coupe son oreille ?", a: ["Vincent van Gogh", "Pablo Picasso", "Claude Monet", "Salvador Dali"], r: 0 },
     { q: "Quelle est la capitale des Etats-Unis ?", a: ["New York", "Los Angeles", "Washington D.C.", "Chicago"], r: 2 },
     { q: "Quel est le plus grand os du corps humain ?", a: ["Le radius", "Le femur", "Le tibia", "La colonne vertebrale"], r: 1 },
     { q: "Quel monument se trouve sur la place de l'Etoile a Paris ?", a: ["La Tour Eiffel", "L'Arc de Triomphe", "Le Louvre", "Le Sacre-Coeur"], r: 1 },
