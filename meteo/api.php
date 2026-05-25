@@ -14,6 +14,7 @@ $lat = $geoData['results'][0]['latitude'];
 $lon = $geoData['results'][0]['longitude'];
 $nomVille = $geoData['results'][0]['name'];
 
+// Ajout de precipitation et precipitation_sum
 $weatherUrl = "https://api.open-meteo.com/v1/forecast?latitude=$lat&longitude=$lon&current=temperature_2m,weather_code,relative_humidity_2m,wind_speed_10m&hourly=temperature_2m,weather_code,precipitation&daily=weather_code,temperature_2m_max,temperature_2m_min,sunrise,sunset,precipitation_sum&timezone=auto";
 $data = json_decode(file_get_contents($weatherUrl), true);
 

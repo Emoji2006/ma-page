@@ -13,6 +13,28 @@ function getMoonIcon() {
     return moonPhases[phase];
 }
 
+function sauvegarderHistorique(ville) {
+    let historique = JSON.parse(localStorage.getItem('meteoHistorique') || '[]');
+    if (!historique.includes(ville)) {
+        historique.unshift(ville);
+        if (historique.length > 5) historique.pop();
+        localStorage.setItem('meteoHistorique', JSON.stringify(historique));
+    }
+}
+
+function afficherHistorique() {
+    let historique = JSON.parse(localStorage.getItem('meteoHistorique') || '[]');
+    let container = document.getElementById("historique");
+    if (!container) return;
+    container.innerHTML = "<strong>Historique : </strong>" + 
+        historique.map(v => `<span style="cursor:pointer; color:blue; margin-right:10px; text-decoration:underline;" onclick="chargerVille('${v}')">${v}</span>`).join(" | ");
+}
+
+function chargerVille(ville) {
+    document.getElementById("ville").value = ville;
+    chargerMeteo();
+}
+
 function suggérerVilles() {
     let input = document.getElementById("ville").value;
     let container = document.getElementById("suggestions");
@@ -33,6 +55,10 @@ function suggérerVilles() {
 function chargerMeteo() {
     let ville = document.getElementById("ville").value.trim();
     if (!ville) return;
+    
+    sauvegarderHistorique(ville);
+    afficherHistorique();
+
     let heureActuelle = new Date().getHours();
     let now = new Date();
     let heureLocaleStr = now.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
@@ -88,3 +114,5 @@ function chargerMeteo() {
             document.getElementById("resultat").innerHTML = html + `</div>`;
         });
 }
+
+window.onload = afficherHistorique;

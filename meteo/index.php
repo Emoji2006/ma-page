@@ -15,6 +15,9 @@
             <button onclick="chargerMeteo()">OK</button>
         </div>
         <div id="suggestions" class="suggestions-list"></div>
+
+        <div id="historique" class="history"></div>
+
         <div id="resultat"></div>
     </div>
     <script src="script.js"></script>
