@@ -5,7 +5,6 @@ const playlist = [
     { file: "musiques/Imagine - John Lennon _ The Plastic Ono Band (w The Flux Fiddlers) (Ultimate Mix 2018) - 4K REMASTER.mp3", title: "John Lennon - Imagine" },
     { file: "musiques/La chanson des Restos -Live-.mp3", title: "La chanson des Restos" },
     { file: "musiques/La Pig Chenilliste - La cheucheu pour les bleus (Clip officiel).mp3", title: "La Pig Chenilliste" },
-    { file: "musiques/Le Poussin piou de Pelcino.mp3", title: "Le Poussin piou de Pelcino" },
     { file: "musiques/LECOLE LA CHANSON DES ABONNES SATINE.mp3", title: "LECOLE LA CHANSON DES ABONNES SATINE" },
     { file: "musiques/Michael Jackson Billie Jean Official Music Video.mp3", title: "Michael Jackson - Billie Jean" },
     { file: "musiques/Motivés -  Le chant des partisans.mp3", title: "Motivés - Le chant des partisans" },
