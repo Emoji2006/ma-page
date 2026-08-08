@@ -23,7 +23,7 @@ p {
 
 .texte {
     background: rgba(255, 255, 255, 0.6);
-    padding: auto;
+    padding: 50px 50px 50px 50px;
 }
 
 /* pour voir les limites des divs */
