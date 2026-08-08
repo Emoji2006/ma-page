@@ -7,7 +7,7 @@ const playlist = [
     { file: "musiques/calme/Calme/05. Bien-Etre - Ces Instants Romantiques.mp3", title: "Bien-Être - Ces Instants Romantiques" },
     { file: "musiques/calme/Calme/06. Bien-Etre - Soie et Satin.mp3", title: "Bien-Être - Soie et Satin" },
     { file: "musiques/calme/Calme/07. Bien-Etre - Matin Calme.mp3", title: "Bien-Être - Matin Calme" },
-    { file: "musiques/calme/Calme/08. Bien-Être - Petits Flot.mp3", title: "Bien-Être - Petits Flot" },
+    { file: "musiques/calme/Calme/08. Bien-Etre - Petits Flot.mp3", title: "Bien-Être - Petits Flot" },
 ];
 
 
