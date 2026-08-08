@@ -1,9 +1,13 @@
 // Liste des fichiers MP3
 const playlist = [
-    { file: "Slimane - Paname.mp3", title: "Slimane - Paname" },
-    { file: "Nino Ferrer - Mirza (1965).mp3", title: "Nino Ferrer - Mirza" },
-    { file: "RaggMopp.mp3", title: "Ames Brothers - Rag Mop" },
-    { file: "Indochine l'aventurier parole.mp3", title: "Indochine - L'aventurier" }
+    { file: "musiques/calme/Calme/01. Bien-Être - Petit Arbre.mp3", title: "Bien-Être - Petit Arbre" },
+    { file: "musiques/calme/Calme/02. Bien-Être - Douceur Romantique.mp3", title: "Bien-Être - Douceur Romantique" },
+    { file: "musiques/calme/Calme/03. Bien-Être - Peace.mp3", title: "Bien-Être - Peace" },
+    { file: "musiques/calme/Calme/04. Bien-Être - Calme.mp3", title: "Bien-Être - Calme" },
+    { file: "musiques/calme/Calme/05. Bien-Être - Ces Instants Romantiques.mp3", title: "Bien-Être - Ces Instants Romantiques" },
+    { file: "musiques/calme/Calme/06. Bien-Être - Soie et Satin.mp3", title: "Bien-Être - Soie et Satin" },
+    { file: "musiques/calme/Calme/07. Bien-Être - Matin Calme.mp3", title: "Bien-Être - Matin Calme" },
+    { file: "musiques/calme/Calme/08. Bien-Être - Petits Flot.mp3", title: "Bien-Être - Petits Flot" },
 ];
 
 
