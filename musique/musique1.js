@@ -21,8 +21,14 @@ const player = document.getElementById("player");
 const titleDisplay = document.getElementById("current-title");
 const playlistNames = document.getElementById("playlist-names");
 const playPauseBtn = document.getElementById("playpause");
+const muteToggleBtn = document.getElementById("mute-toggle");
 
 let index = 0;
+
+function updateMuteButton() {
+    muteToggleBtn.textContent = player.muted ? "🔇 Muet" : "🔊 Son";
+    muteToggleBtn.setAttribute("aria-pressed", String(player.muted));
+}
 
 // Afficher la playlist cliquable
 playlist.forEach((item, i) => {
@@ -75,3 +81,11 @@ playPauseBtn.addEventListener("click", () => {
         playPauseBtn.textContent = "▶ Play";
     }
 });
+
+// Bouton Muet / Son
+muteToggleBtn.addEventListener("click", () => {
+    player.muted = !player.muted;
+    updateMuteButton();
+});
+
+updateMuteButton();
