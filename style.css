@@ -1,0 +1,84 @@
+#header {
+    background: linear-gradient(rgb(255, 81, 0), rgb(229, 255, 0));
+    height: 200px;
+    margin: 0;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.card-deck {
+    margin: 100px;
+}
+
+.accordion {
+    margin: 20px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #333;
+    color: #fff;
+}
+
+#logo {
+    width: 40px;
+}
+
+.card img {
+    min-height: 200px;
+    max-height: 200px;
+}
+
+.carousel-item {
+    height: 704px;
+}
+
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 400px;
+}
+
+.carousel-item h5,
+p,
+li {
+    color: black;
+}
+
+@media screen and (min-width: 480px) {
+    #leftsidebar {
+        width: 200px;
+        float: left;
+    }
+
+    #main {
+        margin-left: 216px;
+    }
+}
+
+#navbardrop {
+    color: white;
+    font-weight: bold;
+}
+.dropdown-item1{
+    background-color:chartreuse;
+    color: red;
+}
+
+/*.dropdown-item2{
+    background-color:chartreuse;
+    color: red;
+}*/
+
+/*.dropdown-item3{
+    background-color:chartreuse;
+    color: red;
+}*/
