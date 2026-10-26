@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Serpent</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="jquery.js"></script>
+    <script src="geeklib.js"></script>
+</head>
+
+<body>
+    <div id="rideauGame">
+        <div id="rideauInto">
+            <h2>HUNGRY SNAKE</h2>
+            <p>Press Start Button to Begin the Game</p>
+            <button id="startGame" class='btn btn-info'>Start Game</button>
+        </div>
+    </div>
+
+    <div id="boxPrincipal">
+        <h1>Hungry Snake</h1>
+
+        <div class="arena-div">
+            <div id="arena"></div>
+        </div>
+
+        <div id="dashboard">
+            <div id="ticker">TICK : <span id="tick"></span></div>
+            <div id="score">SCORE : <span></span></div>
+            <div id="keypressed"></div>
+        </div>
+
+
+    </div>
+
+    <script src="game.js"></script>
+</body>
+
+</html>

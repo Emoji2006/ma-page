@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    font-family: 'Merienda', cursive;
+    background: url(conichon.jpg) center / cover;
+    color: rgb(218, 47, 81);
+    /*text-shadow: -10px -7px #000;*/
+    font-size: 150%;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#boxPrincipal {
+    /* hauteur de la fenêtre (viewport)*/
+    height: 100vh;
+    /* pour tout centrer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#arena {
+    /* background: rgba(0, 0, 0, 0.7);*/
+    background: linear-gradient(rgba(2, 109, 250, 0.9), rgba(0, 212, 29, 0.9));
+    position: relative;
+    border: 15px ridge #745644;
+    min-height: 100px;
+}
+
+.score-div {
+    font-size: 160%;
+}
+
+#dashboard {
+    position: relative;
+    left: 385px;
+    bottom: 500px;
+    background-color: #333;
+    color: #fff;
+    width: 200px;
+    font-size: 20px;
+    padding-left: 20px;
+    box-shadow: inset 0 0 3em gold, 0 0 3em red;
+    border: 15px ridge #c00000;
+    border-left: 0;
+    border-radius: 30px;
+}
+
+div h1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(255, 255, 255, 0.9));
+    position: relative;
+    border: 15px ridge #ffffff;
+    border-bottom: 0;
+    text-align: center;
+    border-radius: 30px;
+    margin-bottom: 0;
+    margin-top: 0px;
+    width: 530px;
+}
+
+#rideauGame {
+    background: url(serpent.jpg) center / cover;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    color: #ffff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+#rideauInto {
+    background: #fff;
+    color: #333;
+    height: 190px;
+    border: 5px dashed #fff;
+    line-height: 35px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #888;
+    position: absolute;
+    width: 500px;
+    height: 200px;
+    left: 50%;
+    margin-left: -260px;
+    top: 200px;
+    z-index: 2;
+}
+
+#startGame {
+    display: none;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 5px 5px 5px #0f0;
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+}
+
+#startGame:hover {
+    background: #f1ee07;
+    color: #fff;
+}
+
+#arena>div {
+    position: absolute;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.serpent-tete {
+    background: #ff0;
+    border: 4px solid #f80;
+}
+
+.serpent-corps {
+    background: #0f0;
+    border: 4px solid green;
+}
+
+.pomme {
+    background: yellow;
+    border: 4px solid red;
+}
