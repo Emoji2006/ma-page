@@ -1,0 +1,81 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    color: red;
+    background: greenyellow;
+    display: flex;
+    flex-wrap: wrap;
+    /*mettre en colonne le body (2 parties)*/
+}
+
+a {
+    text-decoration: none;
+    /* enlève le style de base sur les liens */
+}
+
+/* pour voir les limites des divs */
+
+p {
+    color: blue;
+}
+
+/* pour voir les limites des divs */
+
+.button {
+    background: red;
+    /* couleur arrière plan */
+    color: white;
+    border-radius: 50px;
+    /* angles ronds */
+    margin: 15px auto;
+    /* marge exterieure */
+    padding: 5px 5px 10px;
+    /*5% INTERIEURE */
+    height: 50px 30px;
+}
+
+#menu {
+    background: green;
+    height: 140%;
+    width: 20%;
+    /*partie 1 du body */
+    flex-direction: column;
+    justify-content: start;
+    display: flex;
+    align-items: center;
+    color: yellow;
+}
+
+#contenu {
+    width: 80%;
+    /* display: flex;*/
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    /* partie 2 du body */
+    background: url('fond11.PNG') no-repeat center / cover;
+}
+
+#score,
+#vie {
+    color: #fff;
+    font-size: 200%;
+    display: flex;
+    align-items: top;
+}
+
+#regles {
+    color: #00ff53;
+    font-size: 40%;
+    margin: 40%;
+}
+
+.ennemi {
+    position: absolute;
+    width: 129px;
+    height: 189px;
+    background-image: url('zombie.gif');
+    cursor: url('curseur.png') 32 32, auto;
+}
