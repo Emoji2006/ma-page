@@ -1,0 +1,67 @@
+﻿<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clément</title>
+
+    <link rel="stylesheet" href="musique.css">
+</head>
+
+<body>
+
+    <div id='menu'>
+        <!-- <img id="logo" src="............png"> -->
+        <br>
+        <h1 id="titre">Clément G.F</h1>
+        <br>
+
+        <!-- Décoration Citrouille d'Halloween -->
+        <div class="citrouille-container">
+            <div class="tige"></div>
+            <div class="citrouille">
+                <div class="oeil gauche"></div>
+                <div class="oeil droit"></div>
+                <div class="nez"></div>
+                <div class="bouche"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contenu">
+        <h1 id="titreplaylist">Playlist d'Halloween 🎃</h1>
+
+        <!-- TITRE -->
+        <p id="current-title"><b>Fichier en cours :</b></p>
+
+        <!-- LECTEUR MULTIMÉDIA -->
+        <video id="player" controls width="auto" height="auto">
+            Votre navigateur ne supporte pas la lecture audio/vidéo.
+        </video>
+
+        <br><br>
+
+        <div id="controls">
+
+            <!-- Boutons -->
+            <button id="prev">⏮ Précédent</button>
+            <button id="playpause">⏯ Pause/Play</button>
+            <button id="next">⏭ Suivant</button>
+        </div>
+        <br><br>
+
+        <!-- Barre de progression -->
+        <input type="range" id="seekbar" value="0" min="0" max="100" step="0.1">
+
+        <br><br>
+
+        <!-- Playlist cliquable -->
+        <ul id="playlist-names"></ul>
+    </div>
+
+    <script src="musique.js"></script>
+
+</body>
+
+</html>
