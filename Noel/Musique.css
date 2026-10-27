@@ -1,0 +1,163 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    color: red;
+    /*background: greenyellow;*/
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url("pngtree-christmas-transparent-background-png-png-image.png");
+
+}
+
+#logo {
+    width: 60%;
+    /* tu peux mettre 70%, 80%, 100%… */
+    max-width: 300px;
+    /* taille max pour éviter que ce soit trop grand */
+}
+
+
+#titreplaylist {
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+    /* enlève le style de base sur les liens */
+}
+
+#titre {
+    background-color: mediumturquoise;
+    font-size: 25px;
+}
+
+/* pour voir les limites des divs */
+
+/* p {
+    color: blue;
+} */
+
+/* pour voir les limites des divs */
+
+/* .button {
+    background: red;
+    /* couleur arrière plan 
+    color: white;
+    border-radius: 50px;
+    /* angles ronds 
+    margin: 15px auto;
+    /* marge exterieure
+    padding: 5px 5px 10px;
+    /* marge INTERIEURE
+    height: 50px 30px;
+} */
+
+#menu {
+    width: 20%;
+    /*partie 1 du body */
+    flex-direction: column;
+    justify-content: start;
+    display: flex;
+    align-items: center;
+    color: darkgreen;
+    background-image: url("pngtree-christmas-snowflake-seamless-pattern-for-winter-holidays-ornaments-with-beautiful-snow-picture-image.jpg");
+}
+
+#contenu {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#controls {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    /* espace entre les boutons */
+    margin-top: 10px;
+}
+
+#controls button {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+
+b {
+    font-size: 25px;
+}
+
+video {
+    margin-top: auto;
+    max-width: 90%;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#seekbar {
+    width: 80%;
+    margin-top: 10px;
+}
+
+/*#player {
+    width: auto;
+    height: auto;
+}*/
+
+#player {
+    width: 100%;        /* prend toute la largeur disponible */
+    max-width: 800px;   /* limite pour éviter d'être trop grand */
+    height: auto;       /* hauteur automatique */
+}
+
+/* #playlist-names {
+    list-style: none;
+    padding: 0;
+    background-color: white;
+    color:green;
+} */
+
+#playlist-names {
+    list-style: none;
+    padding: 10px;
+    background-color: white;
+    color: green;
+    width: 80%;
+    max-height: 300px;
+    /* hauteur de la zone */
+    overflow-y: auto;
+    /* active l’ascenseur vertical */
+    border: 2px solid green;
+}
+
+/*#playlist-names li {
+    cursor: pointer;
+    margin: 5px 0;
+}*/
+
+#playlist-names li {
+    font-size: 20px;   /* augmente la taille du texte */
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+
+#playlist-names li:hover {
+    color: blue;
+}
+
+#current-title {
+    font-size: 25px;      /* augmente la taille du texte */
+    background-color: greenyellow;
+    color: blue;
+}
+

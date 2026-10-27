@@ -1,0 +1,100 @@
+﻿<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clément</title>
+
+    <link rel="stylesheet" href="Musique copy.css">
+</head>
+
+<body>
+    <audio id="bruitage-cadeau" src="./Noel/bruit de papier de cadeau déchirer.mp3" preload="auto"></audio>
+    <div id="overlay-cadeau">
+        <div class="cadeau" onclick="ouvrirCadeau()">
+            <div class="noeud-top">
+                <div class="boucle gauche"></div>
+                <div class="boucle droite"></div>
+                <div class="centre"></div>
+                <div class="pan gauche"></div>
+                <div class="pan droit"></div>
+            </div>
+
+            <div class="noeud"></div>
+            <div class="ruban-v"></div>
+            <div class="ruban-h"></div>
+        </div>
+        <p class="texte-cadeau">Clique sur le cadeau de Noël 🎁</p>
+    </div>
+    
+    <div id='menu'>
+        <img id="logo" src="pere-noel-dans-snowdome-avec-logo-joyeux-noel-gratuit-vectoriel.jpg">
+        <br>
+        <h1 id="titre">Clément G.F</h1>
+        <br>
+        <!-- <p>La meilleur team!</p> -->
+        <div class="sapin-container">
+            <div class="star"></div>
+
+            <div class="tree-layer layer1"></div>
+            <div class="tree-layer layer2"></div>
+            <div class="tree-layer layer3"></div>
+            <div class="trunk"></div>
+
+            <div class="guirlande g1"></div>
+            <div class="guirlande g2"></div>
+            <div class="guirlande g3"></div>
+
+
+            <div class="all-balls">
+                <div class="ball rouge b1"></div>
+                <div class="ball or b2"></div>
+                <div class="ball bleu b3"></div>
+                <div class="ball rose b4"></div>
+                <div class="ball blanc b5"></div>
+                <div class="ball rouge b6"></div>
+                <div class="ball or b7"></div>
+                <div class="ball bleu b8"></div>
+                <div class="ball rose b9"></div>
+                <div class="ball blanc b10"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contenu">
+        <h1 id="titreplaylist">Playlist de Noël</h1>
+
+        <!-- TITRE -->
+        <p id="current-title"><b>Fichier en cours :</b></p>
+
+        <!-- LECTEUR MULTIMÉDIA -->
+        <video id="player" controls width="auto" height="auto">
+            Votre navigateur ne supporte pas la lecture audio/vidéo.
+        </video>
+
+        <br><br>
+
+        <div id="controls">
+
+            <!-- Boutons -->
+            <button id="prev">⏮ Précédent</button>
+            <button id="playpause">⏯ Pause/Play</button>
+            <button id="next">⏭ Suivant</button>
+        </div>
+        <br><br>
+
+        <!-- Barre de progression -->
+        <input type="range" id="seekbar" value="0" min="0" max="100" step="0.1">
+
+        <br><br>
+
+        <!-- Playlist cliquable -->
+        <ul id="playlist-names"></ul>
+    </div>
+
+    <script src="musique copy.js"></script>
+
+</body>
+
+</html>
