@@ -59,13 +59,8 @@ function playMedia() {
         });
     }
 }
-/*// Jouer le premier média
-playMedia();*/
-
-// Initialisation (charge le premier titre sans forcer la lecture immédiate pour éviter les erreurs consoles)
-const firstFile = playlist[index].file;
-player.src = firstFile;
-titleDisplay.innerHTML = "<b>Prêt à jouer :</b> " + playlist[index].title;
+// Tenter de lancer le premier média dès le chargement de la page.
+playMedia();
 
 // Quand le média se termine → passer au suivant
 player.addEventListener("ended", () => {
