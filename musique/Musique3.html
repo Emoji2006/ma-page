@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clément</title>
+
+    <link rel="stylesheet" href="Musique3.css">
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+
+    <div id='menu'>
+        <!-- <img id='logo' width="50%" src='champi.png'> -->
+        <br>
+        <h1 id="titre">Clément G.F</h1>
+        <br>
+        <p>La meilleur musique !</p>
+        <br>
+        <a class="button" href="Musique1.html">Musique 1</a>
+        <br>
+        <a class="button" href="Musique2.html">Musique 2</a>
+        <br>
+        <a class="button" href="Musique3.html">Musique 3</a>
+        <br>
+        <a class="button" href="https://emoji2006.github.io/ma-page/ma-page/">Retour</a>
+    </div>
+
+    <div id='contenu'>
+        <div class='texte'>
+
+            <h2>Playlist de la colo à Madagascar</h2>
+
+            <!-- TITRE DE LA MUSIQUE -->
+            <p id="current-title"><b>Musique en cours :</b> </p>
+
+            <!-- LECTEUR MULTIMÉDIA -->
+            <video id="player" controls width="auto" height="auto">
+                Votre navigateur ne supporte pas la lecture audio/vidéo.
+            </video>
+            <br><br>
+
+            <div id="controls">
+
+                <!-- Boutons pour changer de musique -->
+                <button id="prev">⏮ Précédent</button>
+                <button id="playpause">⏯ Pause/Play</button>
+                <button id="next">⏭ Suivant</button>
+                <button id="mute-toggle" type="button">🔊 Son</button>
+            </div>
+            <br><br>
+
+            <p><b>Playlist :</b></p>
+            <ul id="playlist-names"></ul>
+        </div>
+
+        <script src="musique3.js"></script>
+
+</body>
+
+</html>
