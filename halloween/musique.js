@@ -1,9 +1,20 @@
 // Liste des fichiers (MP3 et MP4) dans le même dossier
 const playlist = [
-    { file: "./chanson/Meilleures Chansons d'HALLOWEEN 2023.mp3", title: "Meilleures Chansons d'HALLOWEEN 2023"},
     { file: "./chanson/KIDZ BOP Kids Vampire.mp3", title: "KIDZ BOP Kids Vampire"},
     { file: "./chanson/The Citizens of Halloween - This Is Halloween.mp4", title: "The Citizens of Halloween - This Is Halloween"},
-    { file: "./chanson/Disney Halloween Songs Playlist 2023🎃 Disney Halloween Music Mix 2023.mp3", title: "Disney Halloween Songs Playlist 2023🎃 Disney Halloween Music Mix 2023"},
+    { file: "./chanson/The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/01 - Abandoned Warehouse.mp3", title: "The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/01 - Abandoned Warehouse"},
+    { file: "./chanson/The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/02 - Ghost Awaken.mp3", title: "Ghost Awaken"},
+    { file: "./chanson/The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/03 - Dont Fall A Sleep.mp3", title: "Dont Fall A Sleep"},
+    { file: "./chanson/The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/04 - Haunted Church.mp3", title: "Haunted Church"},
+    { file: "./chanson/The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/05 - Haunted Moans.mp3", title: "Haunted Moans"},
+    { file: "./chanson/The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/06 - Dark Night.mp3", title: "Dark Night"},
+    { file: "./chanson/The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/07 - Haunted Fun House.mp3", title: "Haunted Fun House"},
+    { file: "./chanson/The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/08 - Dark Visions.mp3", title: "Dark Visions"},
+    { file: "./chanson/The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/09 - Haunted Dreams.mp3", title: "Haunted Dreams"},
+    { file: "./chanson/The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/10 - Haunted Ambience.mp3", title: "Haunted Ambience"},
+    { file: "./chanson/The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/11 - Don't Make A Sound.mp3", title: "Don't Make A Sound"},
+    { file: "./chanson/The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/12 - Cemetary Birth.mp3", title: "Cemetary Birth"},
+    { file: "./chanson/The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/13 - Ancient Ceremony.mp3", title: "Ancient Ceremony"},
 ];
 
 const player = document.getElementById("player");
@@ -59,8 +70,13 @@ function playMedia() {
         });
     }
 }
-// Tenter de lancer le premier média dès le chargement de la page.
+// Jouer le premier média
 playMedia();
+
+// Initialisation (charge le premier titre sans forcer la lecture immédiate pour éviter les erreurs consoles)
+const firstFile = playlist[index].file;
+player.src = firstFile;
+titleDisplay.innerHTML = "<b>Prêt à jouer :</b> " + playlist[index].title;
 
 // Quand le média se termine → passer au suivant
 player.addEventListener("ended", () => {
