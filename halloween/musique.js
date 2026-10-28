@@ -44,7 +44,7 @@ const playlist = [
     { file: "./chanson/The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/40 - Death Screams.mp3", title: "Death Screams"},
     { file: "./chanson/The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/41 - CreepyHouse.mp3", title: "CreepyHouse"},
     { file: "./chanson/The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/42 - Terror.mp3", title: "Terror"},
-    { file: "./chanson/The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/43 - Creature.mp3", title: "Creature"},
+    { file: "./chanson/The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/43 - Creatures.mp3", title: "Creatures"},
     { file: "./chanson/The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/44 - Bloody Murder.mp3", title: " Bloody Murder"},
     { file: "./chanson/The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/45 - Blood In The Air.mp3", title: "Blood In The Air"},
     { file: "./chanson/The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/46 - NightTerrors.mp3", title: "NightTerrors"},
@@ -58,10 +58,10 @@ const playlist = [
     { file: "./chanson/The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/54 - Errie.mp3", title: "Errie"},
     { file: "./chanson/The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/55 - Bloody Mass.mp3", title: "Bloody Mass"},
     { file: "./chanson/The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/56 - Great American Haunting.mp3", title: "Great American Haunting"},
-    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/01 - Michael Jackson - Thriller (Single Version).mp3", title: "Michael Jackson - Thriller (Single Version)"},
-    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/02 - Ray Parker Jr. - Ghostbusters (Single Version).mp3", title: "Ray Parker Jr. - Ghostbusters (Single Version)"},
-    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/03 - Rockwell - Somebody's Watching Me (Single Version).mp3", title: "Rockwell - Somebody's Watching Me (Single Version)"},
-    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/04 - AC/DC - Highway To Hell (Single Version).mp3", title: "AC/DC - Highway To Hell (Single Version)"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/01 - Michael Jackson - Thriller (Single Version).mp3", title: "Michael Jackson - Thriller"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/02 - Ray Parker Jr. - Ghostbusters.mp3", title: "Ray Parker Jr. - Ghostbusters"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/03 - Rockwell - Somebody's Watching Me (Single Version).mp3", title: "Rockwell - Somebody's Watching Me"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/04 - AC/DC - Highway To Hell.mp3", title: "AC/DC - Highway To Hell"},
     { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/05 - Blue Öyster Cult - (Don't Fear) The Reaper.mp3", title: "Blue Öyster Cult - (Don't Fear) The Reaper"},
     
 ];
