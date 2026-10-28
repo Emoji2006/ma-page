@@ -61,7 +61,7 @@ const playlist = [
     { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/01 - Michael Jackson - Thriller (Single Version).mp3", title: "Michael Jackson - Thriller"},
     { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/02 - Ray Parker Jr. - Ghostbusters.mp3", title: "Ray Parker Jr. - Ghostbusters"},
     { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/03 - Rockwell - Somebody's Watching Me (Single Version).mp3", title: "Rockwell - Somebody's Watching Me"},
-    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/04 - AC/DC - Highway To Hell.mp3", title: "AC/DC - Highway To Hell"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/04 - AC_DC - Highway to Hell.mp3", title: "AC_DC - Highway to Hell"},
     { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/05 - Blue Öyster Cult - (Don't Fear) The Reaper.mp3", title: "Blue Öyster Cult - (Don't Fear) The Reaper"},
     
 ];
