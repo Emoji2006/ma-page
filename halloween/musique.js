@@ -13,7 +13,7 @@ const playlist = [
     { file: "./chanson/The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/09 - Haunted Dreams.mp3", title: "Haunted Dreams"},
     { file: "./chanson/The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/10 - Haunted Ambience.mp3", title: "Haunted Ambience"},
     { file: "./chanson/The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/11 - Don't Make A Sound.mp3", title: "Don't Make A Sound"},
-    { file: "./chanson/The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/12 - Cemetary Birth.mp3", title: "Cemetary Birth"},
+    { file: "./chanson/The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/12 - Cemetary Birds.mp3", title: "Cemetary Birds"},
     { file: "./chanson/The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/13 - Ancient Ceremony.mp3", title: "Ancient Ceremony"},
     { file: "./chanson/The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/14 - Demons In Flight.mp3", title: "Demons In Flight"},
     { file: "./chanson/The Citizens of Halloween - ! Halloween Music For Haunted House ! - 2023/15 - Grandfather Time.mp3", title: "Grandfather Time"},
