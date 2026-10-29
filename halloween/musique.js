@@ -157,7 +157,7 @@ const playlist = [
     { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/97 - Alice In Chains - Them Bones.mp3", title: "Alice In Chains - Them Bones"},
     { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/98 - Cradle Of Filth - Hallowed Be Thy Name.mp3", title: "Cradle Of Filth - Hallowed Be Thy Name"},
     { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/99 - Henry Jackman - Frankenstein's Monster/mp3", title: "Henry Jackman - Frankenstein's Monster"},
-    
+    /* à completer les musiques*/
 ];
 
 const player = document.getElementById("player");
