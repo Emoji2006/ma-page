@@ -63,6 +63,55 @@ const playlist = [
     { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/03 - Rockwell - Somebody's Watching Me (Single Version).mp3", title: "Rockwell - Somebody's Watching Me"},
     { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/04 - AC_DC - Highway to Hell.mp3", title: "AC_DC - Highway to Hell"},
     { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/05 - Blue Öyster Cult - (Don't Fear) The Reaper.mp3", title: "Blue Öyster Cult - (Don't Fear) The Reaper"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/06 - Daryl Hall & John Oates - Maneater.mp3", title: "Daryl Hall & John Oates - Maneater"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/07 - Eurythmics - Sweet Dreams (Are Made of This) (Remastered).mp3", title: "Eurythmics - Sweet Dreams (Are Made of This)"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/08 - Dead Or Alive - You Spin Me Round (Like a Record).mp3", title: "Dead Or Alive - You Spin Me Round (Like a Record)"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/09 - Gaten Matarazzo - Never Ending Story.mp3", title: "Gaten Matarazzo - Never Ending Story"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/10 - Will Smith - Men In Black (From _Men In Black_ Soundtrack).mp3", title: "Will Smith - Men In Black"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/11 - Michael Jackson - Beat It.mp3", title: "Michael Jackson - Beat It"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/12 - Britney Spears - Toxic.mp3", title: "Britney Spears - Toxic"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/13 - Ke$ha - Cannibal.mp3", title: "Ke$ha - Cannibal"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/14 - Shakira - She Wolf.mp3", title: "Shakira - She Wolf"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/15 - Sophie Ellis-Bextor - Murder On The Dancefloor.mp3", title: "Sophie Ellis-Bextor - Murder On The Dancefloor"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/16 - Redbone - The Witch Queen Orleans.mp3", title: "Redbone - The Witch Queen Orleans"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/17 - Ozzy Osbourne - Crazy Train (2002 Version).mp3", title: "Ozzy Osbourne - Crazy Train"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/18 - The Rolling Stones - Sympathy For The Devil (Original Single Stereo Version).mp3", title: "The Rolling Stones - Sympathy For The Devil"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/19 - John Carpenter - Halloween Theme.mp3", title: "John Carpenter - Halloween Theme"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/20 - Michael Jackson - Blood on the Dance Floor.mp3", title: "Michael Jackson - Blood on the Dance Floor"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/21 - Talking Heads - Psycho Killer (2005 Remaster).mp3", title: "Talking Heads - Psycho Killer"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/22 - Glee Cast - Ding Dong The Witch Is Dead.mp3", title: "Glee Cast - Ding Dong The Witch Is Dead"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/23 - Harry Belafonte - Jump In The Line.mp3", title: "Harry Belafonte - Jump In The Line"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/24 - Elvis Presley - (You're The) Devil in Disguise.mp3", title: "Elvis Presley - (You're The) Devil in Disguise"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/25 - AC_DC - Back In Black.mp3", title: "AC_DC - Back In Black"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/26 - Screamin' Jay Hawkins - I Put a Spell On You.mp3", title: "Screamin' Jay Hawkins - I Put a Spell On You"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/27 - Johnny Cash - (Ghost) Riders in the Sky.mp3", title: "Johnny Cash - (Ghost) Riders in the Sky"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/28 - Sonya Belousova - Toss A Coin To Your Witcher.mp3", title: "Sonya Belousova - Toss A Coin To Your Witcher"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/29 - Santana - Black Magic Woman (Single Version).mp3", title: "Santana - Black Magic Woman"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/30 - Donovan - Season of the Witch.mp3", title: "Donovan - Season of the Witch"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/31 - Bow Wow Wow - I Want Candy.mp3", title: "Bow Wow Wow - I Want Candy"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/32 - Elle King - Where the Devil Don't Go.mp3", title: "Elle King - Where the Devil Don't Go"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/33 - Blue Öyster Cult - Godzilla.mp3", title: "Blue Öyster Cult - Godzilla"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/34 - Edgar Winter - Frankenstein.mp3", title: "Edgar Winter - Frankenstein"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/35 - Danny Elfman - Jack's Lament.mp3", title: "Danny Elfman - Jack's Lament"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/36 - Nick Cave & The Bad Seeds - Red Right Hand (2011 Remastered Version).mp3", title: "Nick Cave & The Bad Seeds - Red Right Hand"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/37 - The Charlie Daniels Band - The Devil Went Down to Georgia.mp3", title: "The Charlie Daniels Band - The Devil Went Down to Georgia"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/38 - Alice Cooper - Feed My Frankenstein.mp3", title: "Alice Cooper - Feed My Frankenstein"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/39 - AC_DC - Hells Bells.mp3", title: "AC_DC - Hells Bells"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/40 - Glee Cast - Time Warp.mp3", title: "Glee Cast - Time Warp"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/41 - Fifth Harmony - I'm In Love With a Monster.mp3", title: "Fifth Harmony - I'm In Love With a Monster"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/42 - Stevie Wonder - Superstition.mp3", title: "Stevie Wonder - Superstition"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/43 - Michael Jackson - Scream.mp3", title: "Michael Jackson - Scream"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/44 - OutKast - ATLiens.mp3", title: "OutKast - ATLiens"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/45 - Beyoncé - Haunted.mp3", title: "Beyoncé - Haunted"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/46 - Au_Ra - Panic Room.mp3", title: "Au_Ra -Panic Room"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/47 - Usher - My Boo.mp3", title: "Usher - My Boo"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/48 - Loïc Nottet - Doctor.mp3", title: "Loïc Nottet - Doctor"}, 
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/49 - Sia - Alive.mp3", title: "Sia - Alive"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/50 - Lil Peep - witchblades.mp3", title: "Lil Peep - witchblades"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/51 - E. Power Biggs - Toccata & Fugue in D Minor, BWV 565_ Toccata.mp3", title: "E. Power Biggs - Toccata & Fugue in D Minor, BWV 565_ Toccata"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/52 - G-Eazy - Saw It Coming (from the _Ghostbusters_ Original Motion Picture Soundtrack) (feat. Jeremih).mp3", title: "G-Eazy - Saw It Coming"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/53 - TLC - Creep.mp3", title: "TLC - Creep"},
+    
     
 ];
 
@@ -73,6 +122,20 @@ const playPauseBtn = document.getElementById("playpause");
 const seekbar = document.getElementById("seekbar");
 
 let index = 0;
+
+function startPlayback() {
+    const playPromise = player.play();
+    if (playPromise !== undefined) {
+        playPromise.catch(error => {
+            if (error.name === "NotAllowedError") {
+                console.info("Le navigateur bloque la lecture automatique avec le son.");
+                return;
+            }
+
+            console.error("Impossible de lire le média :", error);
+        });
+    }
+}
 
 
 
@@ -106,26 +169,10 @@ function playMedia() {
     }
 
     titleDisplay.innerHTML = "<b>Fichier en cours :</b> " + playlist[index].title;
-
-    // Tentative de lecture (nécessite une interaction utilisateur sur mobile au début)
-    const playPromise = player.play();
-
-    if (playPromise !== undefined) {
-        playPromise.then(() => {
-            playPauseBtn.textContent = "⏸ Pause";
-        }).catch(error => {
-            console.log("Lecture automatique bloquée par le navigateur (normal sur mobile). Attente clic utilisateur.");
-            playPauseBtn.textContent = "▶ Play";
-        });
-    }
+    startPlayback();
 }
 // Jouer le premier média
 playMedia();
-
-// Initialisation (charge le premier titre sans forcer la lecture immédiate pour éviter les erreurs consoles)
-const firstFile = playlist[index].file;
-player.src = firstFile;
-titleDisplay.innerHTML = "<b>Prêt à jouer :</b> " + playlist[index].title;
 
 // Quand le média se termine → passer au suivant
 player.addEventListener("ended", () => {
@@ -147,7 +194,7 @@ document.getElementById("prev").addEventListener("click", () => {
 // Bouton Play/Pause
 playPauseBtn.addEventListener("click", () => {
     if (player.paused) {
-        player.play();
+        startPlayback();
         playPauseBtn.textContent = "⏸ Pause";
     } else {
         player.pause();
@@ -170,30 +217,3 @@ seekbar.addEventListener("input", () => {
         player.currentTime = time;
     }
 });
-
-// Fonction pour décorer le sapin
-function decorerSapin() {
-    const etages = document.querySelectorAll('.etage');
-    const couleurs = ['#ff0000', '#ffd700', '#ffffff', '#00aaff'];
-
-    etages.forEach((etage) => {
-        const nbBoules = 5; // 5 boules par étage
-        for (let i = 0; i < nbBoules; i++) {
-            const boule = document.createElement('div');
-            boule.className = 'boule';
-
-            // Position aléatoire sur l'étage
-            const x = Math.random() * 40 - 20; // Ajustement horizontal
-            const y = Math.random() * 30 + 5;  // Ajustement vertical
-
-            boule.style.backgroundColor = couleurs[Math.floor(Math.random() * couleurs.length)];
-            boule.style.left = `calc(50% + ${x}px)`;
-            boule.style.top = `${y}px`;
-
-            etage.appendChild(boule);
-        }
-    });
-}
-
-// Lancer la décoration au chargement
-decorerSapin();
