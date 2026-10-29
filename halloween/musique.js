@@ -111,6 +111,8 @@ const playlist = [
     { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/51 - E. Power Biggs - Toccata & Fugue in D Minor, BWV 565_ Toccata.mp3", title: "E. Power Biggs - Toccata & Fugue in D Minor, BWV 565_ Toccata"},
     { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/52 - G-Eazy - Saw It Coming (from the _Ghostbusters_ Original Motion Picture Soundtrack) (feat. Jeremih).mp3", title: "G-Eazy - Saw It Coming"},
     { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/53 - TLC - Creep.mp3", title: "TLC - Creep"},
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/54 - Fugees - The Mask.mp3", title: "Fugees - The Mask"}
+    { file: "./chanson/VA - HALLOWEEN  Playlist soirée Halloween 2023/55 - Michael Jackson - Dangerous.mp3", title: "Michael Jackson - Dangerous"},
     
     
 ];
