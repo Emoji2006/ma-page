@@ -165,8 +165,15 @@ const titleDisplay = document.getElementById("current-title");
 const playlistNames = document.getElementById("playlist-names");
 const playPauseBtn = document.getElementById("playpause");
 const seekbar = document.getElementById("seekbar");
+const muteToggleBtn = document.getElementById("mute-toggle");
 
 let index = 0;
+
+function updateMuteButton() {
+    muteToggleBtn.textContent = player.muted ? "🔇 Muet" : "🔊 Son";
+    muteToggleBtn.setAttribute("aria-pressed", String(player.muted));
+}
+
 
 function startPlayback() {
     const playPromise = player.play();
@@ -262,3 +269,11 @@ seekbar.addEventListener("input", () => {
         player.currentTime = time;
     }
 });
+
+// Bouton Muet / Son
+muteToggleBtn.addEventListener("click", () => {
+    player.muted = !player.muted;
+    updateMuteButton();
+});
+
+updateMuteButton();
