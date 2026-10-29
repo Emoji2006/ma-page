@@ -177,6 +177,21 @@ button:active {
 /* --- VERSION MOBILE (iPhone, Android) --- */
 @media screen and (max-width: 768px) {
 
+    html {
+        min-height: 100%;
+        background-size: cover;
+        background-position: center top;
+        background-attachment: fixed;
+        background-color: #211411;
+    }
+
+    body {
+        height: auto;
+        min-height: 100vh;
+        background-image: none;
+        background-color: transparent;
+    }
+
     /* Sur mobile, on empile les blocs verticalement */
     #menu,
     #contenu {
